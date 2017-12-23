@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+class test
+{
+	public:
+	int x,y,z;
+	test ()
+	{
+		cout<<"constructor";
+		x=10;
+		y=5;
+	}
+	test(int a,int b)
+	{
+		cout<<"para constructor";
+		x=a;
+		y=b;
+	}
+	void diff()
+	{
+		z=x-y;
+	}
+	void display()
+	{
+		cout<<"the number are"<<x<<'\t'<<y;
+		cout<<"the result"<<z;
+	}
+};
+
+
+
+
+int main() {
+	test t1;
+	test t2(33,23);
+	t1.diff();
+	t1.display();
+	t2.diff();
+	t2.display();
+	// your code goes here
+	return 0;
+}
